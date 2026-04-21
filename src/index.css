@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #06060e;
+  --bg-secondary: #0d0d1a;
+  --bg-tertiary: #151530;
+  --bg-card: #111127;
+  --bg-hover: #1a1a3e;
+  --accent: #6366f1;
+  --accent-glow: #818cf8;
+  --cyan: #22d3ee;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border: #1e293b;
+  --success: #22c55e;
+  --danger: #ef4444;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+.glow-border { border: 1px solid rgba(99,102,241,0.3); box-shadow: 0 0 15px rgba(99,102,241,0.1); }
+.glass { background: rgba(17,17,39,0.8); backdrop-filter: blur(12px); border: 1px solid rgba(99,102,241,0.15); }
+
+.chat-markdown table { width:100%; border-collapse:collapse; margin:0.5em 0; font-size:0.85em; overflow-x:auto; display:block; }
+.chat-markdown th,.chat-markdown td { padding:8px 12px; border:1px solid var(--border); text-align:left; white-space:nowrap; }
+.chat-markdown th { background:var(--bg-hover); color:var(--cyan); font-weight:600; }
+.chat-markdown tr:nth-child(even) { background:rgba(30,41,59,0.3); }
+.chat-markdown strong { color:var(--accent-glow); }
+.chat-markdown p { margin-bottom:0.5em; }
+.chat-markdown code { background:var(--bg-hover); padding:2px 6px; border-radius:4px; font-size:0.9em; }
+.chat-markdown ul,.chat-markdown ol { padding-left:1.2em; margin-bottom:0.5em; }
+.chat-markdown li { margin-bottom:0.25em; }
+.chat-markdown h1,.chat-markdown h2,.chat-markdown h3 { color:var(--cyan); margin:0.5em 0 0.3em; }
+
+@keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+.animate-fade-in { animation:fadeIn 0.3s ease-out; }
+@keyframes pulseGlow { 0%,100%{box-shadow:0 0 5px rgba(99,102,241,0.3)} 50%{box-shadow:0 0 20px rgba(99,102,241,0.6)} }
+.pulse-glow { animation:pulseGlow 2s ease-in-out infinite; }
+
+input:focus,textarea:focus,select:focus { outline:none; border-color:var(--accent)!important; box-shadow:0 0 0 2px rgba(99,102,241,0.2); }
