@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Mail, CheckCircle, XCircle, Loader2, Save, Trash2, Zap, Phone } from 'lucide-react';
 import api from '../api/client';
 import WhatsAppCard from '../components/WhatsAppCard';
+import InstagramCard from '../components/InstagramCard';
 
 interface SmtpSettings {
   id?: string;
@@ -436,6 +437,8 @@ export default function IntegrationsPage() {
       </div>
 
       <WhatsAppCard />
+
+      <InstagramCard />
 
       <style>{`
         .page-container {
