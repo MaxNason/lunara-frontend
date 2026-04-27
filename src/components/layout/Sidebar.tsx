@@ -1,11 +1,12 @@
 import { NavLink, useNavigate } from 'react-router-dom';
-import { MessageSquare, Users, BarChart3, Settings, LogOut, Zap, Plug } from 'lucide-react';
+import { MessageSquare, Users, BarChart3, Settings, LogOut, Zap, Plug, Instagram } from 'lucide-react';
 import { useAuthStore } from '../../store/authStore';
 
 const links = [
   { to: '/', icon: MessageSquare, label: 'Chat' },
   { to: '/leads', icon: Users, label: 'Leads' },
   { to: '/dashboard', icon: BarChart3, label: 'Dashboard' },
+  { to: '/instagram', icon: Instagram, label: 'Instagram' },
   { to: '/integrations', icon: Plug, label: 'Integrations' },
   { to: '/settings', icon: Settings, label: 'Settings' },
 ];

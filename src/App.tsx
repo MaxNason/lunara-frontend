@@ -8,6 +8,7 @@ import LeadsPage from './pages/LeadsPage';
 import DashboardPage from './pages/DashboardPage';
 import SettingsPage from './pages/SettingsPage';
 import IntegrationsPage from './pages/IntegrationsPage';
+import InstagramAnalyticsPage from './pages/InstagramAnalyticsPage';
 import AppLayout from './components/layout/AppLayout';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -44,6 +45,7 @@ export default function App() {
                 <Route path="dashboard" element={<DashboardPage />} />
                 <Route path="integrations" element={<IntegrationsPage />} />
                 <Route path="settings" element={<SettingsPage />} />
+                <Route path="instagram" element={<InstagramAnalyticsPage />} />
               </Routes>
             </AppLayout>
           </ProtectedRoute>
